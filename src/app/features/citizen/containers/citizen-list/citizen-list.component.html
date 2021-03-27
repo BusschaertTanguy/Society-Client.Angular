@@ -1,0 +1,21 @@
+<div class="clr-row">
+  <div class="clr-col-12">
+    <h1>Citizens</h1>
+  </div>
+</div>
+
+<div class="clr-row">
+  <div class="clr-col-12">
+    <app-citizen-table
+      class="citizen-table"
+      [citizens]="citizens$ | async"
+      (citizenSelected)="loadCitizen($event)">
+    </app-citizen-table>
+  </div>
+</div>
+
+<app-citizen-detail-modal
+  [citizenDetail]="citizen$ | async"
+  [openModal]="detailModalOpen"
+  (closed)="closeDetailModal()">
+</app-citizen-detail-modal>

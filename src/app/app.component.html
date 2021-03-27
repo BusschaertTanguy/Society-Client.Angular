@@ -1,0 +1,20 @@
+<div class="main-container">
+  <header class="header header-6">
+    <div class="branding">
+      <a>
+        <span class="title">Society</span>
+      </a>
+    </div>
+  </header>
+  <div class="content-container">
+    <clr-vertical-nav [clrVerticalNavCollapsible]="true" [(clrVerticalNavCollapsed)]="collapsed">
+      <a clrVerticalNavLink routerLink="./citizens" routerLinkActive="active">
+        <clr-icon clrVerticalNavIcon shape="users"></clr-icon>
+        Citizens
+      </a>
+    </clr-vertical-nav>
+    <div class="content-area">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

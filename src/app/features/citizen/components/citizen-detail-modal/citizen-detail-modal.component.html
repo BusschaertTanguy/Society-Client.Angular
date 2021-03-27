@@ -1,0 +1,26 @@
+<clr-modal [(clrModalOpen)]="openModal" [clrModalClosable]="false">
+  <h3 class="modal-title">Citizen Detail</h3>
+  <div class="modal-body">
+    <form clrForm [formGroup]="form">
+      <clr-input-container>
+        <label for="id">Id</label>
+        <input id="id" clrInput formControlName="id" readonly />
+      </clr-input-container>
+      <clr-input-container>
+        <label for="name">Name</label>
+        <input id="name" clrInput formControlName="name" readonly />
+      </clr-input-container>
+      <clr-input-container>
+        <label for="gender">Gender</label>
+        <input id="gender" clrInput formControlName="gender" readonly />
+      </clr-input-container>
+      <clr-input-container>
+        <label for="dateOfBirth">Date of Birth</label>
+        <input id="dateOfBirth" clrInput formControlName="dateOfBirth" readonly />
+      </clr-input-container>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline" (click)="closeModal()">Close</button>
+  </div>
+</clr-modal>
